@@ -10,6 +10,136 @@
     <link rel="stylesheet" href="./assets/css/style.css">
   </head>
   <body>
-
+    <section class="entry">
+      <div class="entry-body">
+        <div class="entry-inner">
+          <!-- アカウント作成 -->
+          <div class="auth">
+            <h1 class="auth-title">アカウント作成</h1>
+            <div class="auth-logins">
+              <a href="#" class="sns-button is-blue">Facebookでスタート</a>
+              <a href="#" class="sns-button is-red">Googleでスタート</a>
+            </div>
+            <p class="auth-text is-gray">タイムラインへ投稿を行うことや、アカウント情報を伝えることはありません。</p>
+          </div>
+          <!-- フォーム -->
+          <form action="#" method="POST" class="info">
+            <p class="info-title is-gray">アカウント情報</p>
+            <!-- 名前 -->
+            <div class="user-names">
+              <div class="user-input">
+                <label for="last-name">
+                  <p class="text-label">名字<span class="warning">＊</span></p>
+                </label>
+                <input  type="text" name="last-name" id="last-name" class="text-box" required>
+              </div>
+              <div class="user-input">
+                <label for="first-name">
+                  <p class="text-label">名前<span class="warning">＊</span></p>
+                </label>
+                <input  type="text" name="first-name" id="first-name" class="text-box" required>
+              </div>
+            </div>
+            <!-- 性別 -->
+            <div class="people">
+              <p class="text-label">性別</p>
+              <div>
+                <input type="radio" id="man" name="people">
+                <label for="man" class="people-text is-basis">
+                  <p>男性</p>
+                </label>
+                <input type="radio" id="woman" name="people">
+                <label for="woman" class="people-text is-basis">
+                  <p>女性</p>
+                </label>
+                <input type="radio" id="other" name="people">
+                <label for="other" class="people-text is-basis">
+                  <p>その他</p>
+                </label>
+              </div>
+            </div>
+            <!-- 出身 -->
+            <div class="from">
+              <p class="text-label">出身</p>
+              <div class="from-select">
+                <select name="city" id="" class="from-city">
+                  <option value="Tokyo">東京</option>
+                  <option value="Chiba">千葉</option>
+                  <option value="Saitama">埼玉</option>
+                  <option value="Kanagawa">神奈川</option>
+                </select>
+              </div>
+            </div>
+            <!-- Eメール -->
+            <div class="is-under">
+              <label for="email">
+                <p class="text-label">Eメール<span class="warning">＊</span></p>
+              </label>
+              <input type="email" name="email" id="emai" placeholder="ex) hoge@example.com" class="text-box" required>
+            </div>
+            <!-- 電話番号 -->
+            <div class="is-under">
+              <label for="tel">
+                <p class="text-label">電話番号</p>
+              </label>
+              <input type="tel" name="tel" id="tel" placeholder="ex) 09012345678" class="text-box">
+            </div>
+            <!-- パスワード -->
+            <div class="is-under">
+              <label for="password">
+                <p class="text-label">パスワード<span class="warning">＊</span></p>
+              </label>
+              <input type="password" name="password" id="password" class="text-box" required>
+            </div>
+            <!-- パスワード（確認用） -->
+            <div class="is-under">
+              <label for="pass-test">
+                <p class="text-label">パスワード(確認用)<span class="warning">＊</span></p>
+              </label>
+              <input type="password" name="pass-test" id="pass-test" class="text-box" required>
+            </div>
+            <!-- 希望コース -->
+            <div class="is-under">
+              <p class="text-label">希望コース</p>
+              <div class="text-course">
+                <input type="checkbox" id="front" name="course">
+                <label for="front" class="course-check">
+                  フロントエンド
+                </label>
+              </div>
+              <div class="text-course">
+                <input type="checkbox"  id="back" name="course" >
+                <label for="back" class="course-check">
+                  バックエンド
+                </label>
+              </div>
+              <div class="text-course">
+                <input type="checkbox" id="app" name="course">
+                <label for="app" class="course-check">
+                  アプリ
+                </label>
+              </div>
+            </div>
+            <!-- 備考 -->
+            <div class="is-under">
+              <label for="remarks">
+                <p class="text-label">備考</p>
+              </label>
+              <textarea name="remarks" class="text-box is-textarea" placeholder="何かあればご記入ください" ></textarea>
+            </div>
+            <!-- アカウント作成ボタン -->
+            <class class="is-under">
+              <button type="submit" class="create-button">アカウント作成</button>
+            </class>
+            <!-- 利用規約　プライバシーポリシー -->
+          </form>
+          <p class="entry-text">アカウントを作成することにより、<span class="link-skyblue">利用規約</span>と <span class="link-skyblue">プライバシーポリシー</span>に同意するものとします。</p>
+        </div>
+        <div class="entry-outer">
+          <p class="entry-text is-outer">すでにアカウントをお持ちですか？<span class="link-skyblue link-outer">ログイン</span></p>
+          <p class="entry-text is-outer"><span class="link-skyblue link-outer">認証メールが届きませんか？</span></p>
+        </div>
+      </div>
+    </section>
   </body>
 </html>

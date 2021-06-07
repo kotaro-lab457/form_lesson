@@ -91,9 +91,11 @@
   background-color: #fbfbfb;
   outline: none;
   border: 1px solid #d9d9d9;
+  border-radius: 3px;
   height: 36px;
   box-sizing: border-box;
   padding: 5px;
+  line-height: 2;
 }
 
 .text-box:focus {
@@ -250,7 +252,7 @@ input[type="radio"] {
   color: #545658;
   cursor: pointer;
   box-sizing: border-box;
-  padding: 5px 15px;
+  padding: 3px 14px;
   display: inline-block;
   vertical-align: text-bottom;
   position: relative;
@@ -364,7 +366,7 @@ input[type="checkbox"] {
   background-color: #fff;
   border: 1px solid #d9d9d9;
   position: absolute;
-  top: 10%;
+  top: 0;
   left: 0;
   height: 15px;
   width: 15px;
@@ -397,7 +399,6 @@ input[type="checkbox"]:checked + .course-check::after {
   height: 100px;
   resize: none;
   font-size: 13px;
-  line-height: 2;
 }
 
 /*---------------------------------
@@ -409,14 +410,23 @@ input[type="checkbox"]:checked + .course-check::after {
 } */
 
 .create-button {
+  font-size: 13px;
+  cursor: pointer;
+  color: #fff;
+  background-color: #01bfbd;
+  border: none;
+  outline: none;
   box-sizing: border-box;
   padding: 13px;
   width: 100%;
-  color: #fff;
-  background-color: #01bfbd;
-  border: 1px solid #fff;
-  transition: 0.3s;
   border-radius: 3px;
+  transition: 0.3s;
+}
+
+.create-button:active {
+  color: #01bfbd;
+  background-color: #fff;
+  border: 1px solid #d9d9d9;
 }
 
 .create-button:hover {

@@ -17,25 +17,31 @@
           <div class="auth">
             <h1 class="auth-title">アカウント作成</h1>
             <div class="auth-logins">
-              <a href="#" class="sns-button is-blue">Facebookでスタート</a>
-              <a href="#" class="sns-button is-red">Googleでスタート</a>
+              <div class="sns-button-width">
+                <a href="#" class="sns-button is-blue">Facebookでスタート</a>
+              </div>
+              <div class="sns-button-width">
+                <a href="#" class="sns-button is-red">Googleでスタート</a>
+              </div>
             </div>
             <p class="auth-text is-gray">タイムラインへ投稿を行うことや、アカウント情報を伝えることはありません。</p>
           </div>
           <!-- フォーム -->
           <form action="#" method="POST" class="info">
-            <p class="info-title is-gray">アカウント情報</p>
+            <div class="info-container">
+              <p class="info-title is-gray">アカウント情報</p>
+            </div>
             <!-- 名前 -->
             <div class="user-names">
               <div class="user-input">
                 <label for="last-name">
-                  <p class="text-label">名字<span class="warning">＊</span></p>
+                  <p class="text-label">名字<span class="warning"> ※</span></p>
                 </label>
                 <input type="text" name="last-name" id="last-name" class="text-box" required>
               </div>
               <div class="user-input">
                 <label for="first-name">
-                  <p class="text-label">名前<span class="warning">＊</span></p>
+                  <p class="text-label">名前<span class="warning"> ※</span></p>
                 </label>
                 <input type="text" name="first-name" id="first-name" class="text-box" required>
               </div>
@@ -43,9 +49,9 @@
             <!-- 性別 -->
             <div class="people">
               <p class="text-label">性別</p>
-              <div>
+              <div class="people-side">
                 <input type="radio" id="man" name="people">
-                <label for="man" class="people-text is-basis">
+                <label for="man" class="people-text">
                   <p>男性</p>
                 </label>
                 <input type="radio" id="woman" name="people">
@@ -73,7 +79,7 @@
             <!-- Eメール -->
             <div class="is-under">
               <label for="email">
-                <p class="text-label">Eメール<span class="warning">＊</span></p>
+                <p class="text-label">Eメール<span class="warning"> ※</span></p>
               </label>
               <input type="email" name="email" id="emai" placeholder="ex) hoge@example.com" class="text-box" required>
             </div>
@@ -87,14 +93,14 @@
             <!-- パスワード -->
             <div class="is-under">
               <label for="password">
-                <p class="text-label">パスワード<span class="warning">＊</span></p>
+                <p class="text-label">パスワード<span class="warning"> ※</span></p>
               </label>
               <input type="password" name="password" id="password" class="text-box" required>
             </div>
             <!-- パスワード（確認用） -->
             <div class="is-under">
               <label for="pass-test">
-                <p class="text-label">パスワード(確認用)<span class="warning">＊</span></p>
+                <p class="text-label">パスワード(確認用)<span class="warning"> ※</span></p>
               </label>
               <input type="password" name="pass-test" id="pass-test" class="text-box" required>
             </div>
@@ -133,11 +139,20 @@
             </class>
             <!-- 利用規約　プライバシーポリシー -->
           </form>
-          <p class="entry-text">アカウントを作成することにより、<a href="#" class="link-skyblue">利用規約</a>と <a href="#" class="link-skyblue">プライバシーポリシー</a>に同意するものとします。</p>
+          <p class="entry-text">アカウントを作成することにより、
+            <a href="#" class="link-skyblue">利用規約</a>
+            と
+            <a href="#" class="link-skyblue">プライバシーポリシー</a>
+            に同意するものとします。
+          </p>
         </div>
         <div class="entry-outer">
-          <p class="entry-text is-outer">すでにアカウントをお持ちですか？<a href="#" class="link-skyblue link-outer">ログイン</a></p>
-          <p class="entry-text is-outer"><a href="#" class="link-skyblue link-outer">認証メールが届きませんか？</a></p>
+          <p class="entry-text is-outer">すでにアカウントをお持ちですか？
+            <a href="#" class="link-skyblue link-outer"> ログイン</a>
+          </p>
+          <p class="entry-text is-outer">
+            <a href="#" class="link-skyblue link-outer">認証メールが届きませんか？</a>
+          </p>
         </div>
       </div>
     </section>

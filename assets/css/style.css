@@ -58,7 +58,6 @@
 
 .warning {
   color: red;
-  vertical-align: text-bottom;
 }
 
 .link-skyblue {
@@ -87,15 +86,16 @@
 }
 
 .text-box {
-  width: 100%;
   background-color: #fbfbfb;
-  outline: none;
+  box-sizing: border-box;
   border: 1px solid #d9d9d9;
   border-radius: 3px;
   height: 36px;
-  box-sizing: border-box;
+  width: 100%;
   padding: 5px;
+  font-size: 13px;
   line-height: 2;
+  outline: none;
 }
 
 .text-box:focus {
@@ -138,13 +138,17 @@
 /*
   facebook Google ボタン
 ---------------------------------*/
+.sns-button-width {
+  width: 50%;
+  margin-left: 8px;
+}
 
 .sns-button {
   display: inline-block;
   padding: 13px;
   font-size: 13px;
-  width: 50%;
-  margin-left: 8px;
+  /* font-weight: 500; */
+  width: 100%;
   box-sizing: border-box;
   border-radius: 3px;
   transition: 0.3s;
@@ -153,6 +157,7 @@
 
 .is-blue {
   background-color: #3b5999;
+  border: 1px solid #3b5999;
   color: #fff;
 }
 
@@ -170,7 +175,7 @@
   background-color: #fbfbfb;
 }
 
-.sns-button:first-child {
+.sns-button-width:first-child {
   margin-left: 0;
 }
 
@@ -188,26 +193,28 @@
   アカウント情報
 ---------------------------------*/
 
-.info-title {
+.info-container {
+  position: relative;
+  text-align: center;
   margin: 20px 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
-.info-title::after,
-.info-title::before {
-  content: "";
-  border-top: 1px solid #ececec;
-  width: 39%;
+.info-container::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 1px;
+  width: 100%;
+  background-color: #ececec;
 }
 
-.info-title::after {
-  margin-left: 10px;
-}
-
-.info-title::before {
-  margin-right: 10px;
+.info-title {
+  display: inline-block;
+  position: relative;
+  padding: 0 10px;
+  background-color: #fff;
 }
 
 /*---------------------------------
@@ -236,8 +243,10 @@
 
 .people {
   margin-bottom: 20px;
+}
+
+.people-side {
   display: flex;
-  flex-direction: column;
 }
 
 /*
@@ -252,14 +261,14 @@ input[type="radio"] {
   color: #545658;
   cursor: pointer;
   box-sizing: border-box;
-  padding: 3px 14px;
+  padding: 3px 3px 3px 20px;
   display: inline-block;
   vertical-align: text-bottom;
   position: relative;
 }
 
-.is-basis {
-  margin-left: 6px;
+.people-text:nth-of-type(n+2) {
+  margin-left: 15px;
 }
 
 .people-text::before,
@@ -276,7 +285,7 @@ input[type="radio"] {
   border: 1px solid #d9d9d9;
   height: 14px;
   width: 14px;
-  left: -5px;
+  left: 0px;
   margin-top: -8px;
 }
 
@@ -284,7 +293,7 @@ input[type="radio"] {
   background-color: #01bfbd;
   height: 8px;
   width: 8px;
-  left: -1px;
+  left: 4px;
   margin-top: -4px;
   opacity: 0;
 }
@@ -435,4 +444,5 @@ input[type="checkbox"]:checked + .course-check::after {
 
 .entry-outer {
   text-align: center;
+  box-sizing: border-box;
 }

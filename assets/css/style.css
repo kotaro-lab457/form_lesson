@@ -432,15 +432,16 @@ input[type="checkbox"]:checked + .course-check::after {
   transition: 0.3s;
 }
 
+.create-button:hover {
+  background-color: #01a6a4;
+}
+
 .create-button:active {
   color: #01bfbd;
   background-color: #fff;
   border: 1px solid #d9d9d9;
 }
 
-.create-button:hover {
-  background-color: #01a6a4;
-}
 
 .entry-outer {
   text-align: center;
